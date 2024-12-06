@@ -64,7 +64,6 @@ PROVIDE(__arm32_tls_tcb_offset = 0);
 SECTIONS
 {
 	. = __text_start;
-	. = __text_start;
 	.crt0 :
 	{
 		KEEP (*(.crt0))
@@ -234,8 +233,6 @@ SECTIONS
 		*(.sbss)
 		. = ALIGN(4);
 		__sbss_end__  = ABSOLUTE(.);
-		__end__ = ABSOLUTE(.);
-		__eheap_start = ABSOLUTE(.);
 	} >ewram
 
 	__eheap_start = ABSOLUTE(.);
